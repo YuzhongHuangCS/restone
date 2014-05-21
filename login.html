@@ -3,20 +3,21 @@
 Login
 {% endblock %}
 {% block bodycontent %}
-      <h2>Login</h2>
-      <p>
-Please enter your id and password to log in our system
-      </p>
-<form method="post" action="/login">
-Account:<input type="text" name="account"/> <br>
-Password:<input type="password" name="password"/> <br/>
-<input type="submit"/>
-<input type="submit" value="Cancel"
-onclick="window.location='/'; return false;"/>
-<input type="submit" value="New Account"
-onclick="window.location='/apply';return false;"/>
-</form>
-<p>
-{{msg}}
-</p>
+<div id="login">
+   	<h2>Online Powerflow Computing</h2>
+   	{% if msg %}
+	<p class="alert alert-danger">
+		{{msg}}
+	</p>
+	{% endif %}
+   	<p class="alert alert-info">You need to login before use the system</p>
+	<form method="post" action="/login" >
+		<input type="text" name="account" placeholder="Account" class="form-control"/>
+		<input type="password" name="password" placeholder="Password" class="form-control"/>
+		<br/><br/>
+		<input type="submit" class="btn btn-lg btn-primary"/>
+		<input type="submit" value="Cancel" onclick="window.location='/'; return false;" class="btn btn-lg btn-warning"/>
+		<input type="submit" value="New Account" onclick="window.location='/apply';return false;" class="btn btn-lg btn-success"/>
+	</form>
+</div>
 {% endblock %}

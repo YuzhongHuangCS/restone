@@ -5,42 +5,44 @@ Apply
 {% block bodycontent %}
     <div id="apply">
         <h1>New Account Request</h1>
-        <p>
+        {% if error %}
+        <p class="alert alert-danger">
+            {{error}}
+        </p>
+        {% endif %}
+        <p class="alert alert-info">
             Please Enter Your Information Below:
         </p>
-        <p>
+        <p class="alert alert-success">
             Notice: Account, Password and Email are required, other information can be submitted later
         </p>
-        <form method="post" action="/apply" class="input-group">
+        <form method="post" action="/apply">
             Account:
-            <input type="text" name="account" placeholder="Account" class="form-control" /><br/>
+            <input type="text" name="account" placeholder="Account" class="form-control" />
             Password:
-            <input type="password" name="password" placeholder="Password" class="form-control" /><br/>
+            <input type="password" name="password" placeholder="Password" class="form-control" />
             E-mail:
-            <input type="email" name="email" placeholder="email" class="form-control" /><br/>
+            <input type="email" name="email" placeholder="email" class="form-control" />
             age:
             <input type="number" value="0" name="age" placeholder="age" class="form-control" />
-            <br/>JW:
+            JW:
             <input type="number" value="0" name="JW" placeholder="JW" class="form-control" />
-            <br/>XW:
+            XW:
             <input type="number" value="0" name="XW" placeholder="XW" class="form-control" />
-            <br/>YW:
+            YW:
             <input type="number" value="0" name="YW" placeholder="YW" class="form-control" />
-            <br/>TW:
+            TW:
             <input type="number" value="0" name="TW" placeholder="TW" class="form-control" />
-            <br/>XG:
+            XG:
             <input type="number" value="0" name="XG" placeholder="XG" class="form-control" />
-            <br/>YG:
+            YG:
             <input type="number" value="0" name="YG" placeholder="YG" class="form-control" />
-            <br/>
+            
             <div class="btn-group">
             	<input type="submit" class="btn btn-success" />
             	<input type="submit" value="Cancel" onclick="window.location='/';return false;" class="btn btn-warning" />
        		</div>
        </form>
     </div>
-<p>
-{{error}}
-</p>
 </div>
 {% endblock %}
