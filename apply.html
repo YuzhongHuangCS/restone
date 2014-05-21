@@ -3,44 +3,38 @@
 Apply
 {% endblock %}
 {% block bodycontent %}
-    <div id="apply">
-        <h1>New Account Request</h1>
-        {% if error %}
-        <p class="alert alert-danger">
-            {{error}}
-        </p>
-        {% endif %}
-        <p class="alert alert-info">
-            Please Enter Your Information Below:
-        </p>
-        <p class="alert alert-success">
-            Notice: Account, Password and Email are required, other information can be submitted later
-        </p>
-        <form method="post" action="/apply">
-            Account:
-            <input type="text" name="account" placeholder="Account" class="form-control" />
-            Password:
-            <input type="password" name="password" placeholder="Password" class="form-control" />
-            E-mail:
-            <input type="email" name="email" placeholder="email" class="form-control" />
-            age:
-            <input type="number" value="0" name="age" placeholder="age" class="form-control" />
-            JW:
-            <input type="number" value="0" name="JW" placeholder="JW" class="form-control" />
-            XW:
-            <input type="number" value="0" name="XW" placeholder="XW" class="form-control" />
-            YW:
-            <input type="number" value="0" name="YW" placeholder="YW" class="form-control" />
-            TW:
-            <input type="number" value="0" name="TW" placeholder="TW" class="form-control" />
-            XG:
-            <input type="number" value="0" name="XG" placeholder="XG" class="form-control" />
-            YG:
-            <input type="number" value="0" name="YG" placeholder="YG" class="form-control" />
-            
-            <input type="submit" value="Cancel" onclick="window.location='/';return false;" class="btn btn-lg btn-warning" />
-            <input type="submit" class="btn btn-lg btn-success" />
-       </form>
-    </div>
+<div id="apply">
+    <h1>New Account Request</h1>
+    {% if error %}
+    <p class="alert alert-danger">{{error}}</p>
+    {% endif %}
+    <p class="alert alert-info">Please Enter Your Information Below:    </p>
+    <p class="alert alert-success">Notice: Account, Password and Email are required, other information can be submitted later</p>
+
+    <form method="post" action="/apply">
+        Account:
+        <input type="text" name="account" placeholder="Account" class="form-control" />
+        Password:
+        <input type="password" name="password" placeholder="Password" class="form-control" />
+        E-mail:
+        <input type="email" name="email" placeholder="email" class="form-control" />
+        age:
+        <input type="number" value="0" name="age" placeholder="age" class="form-control" />
+        JW:
+        <input type="number" value="0" name="JW" placeholder="JW" class="form-control" />
+        XW:
+        <input type="number" value="0" name="XW" placeholder="XW" class="form-control" />
+        YW:
+        <input type="number" value="0" name="YW" placeholder="YW" class="form-control" />
+        TW:
+        <input type="number" value="0" name="TW" placeholder="TW" class="form-control" />
+        XG:
+        <input type="number" value="0" name="XG" placeholder="XG" class="form-control" />
+        YG:
+        <input type="number" value="0" name="YG" placeholder="YG" class="form-control" />
+        
+        <input type="submit" value="Cancel" onclick="window.location='/';return false;" class="btn btn-lg btn-warning" />
+        <input type="submit" class="btn btn-lg btn-success" />
+    </form>
 </div>
 {% endblock %}

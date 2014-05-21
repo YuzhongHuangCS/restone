@@ -6,9 +6,7 @@ Login
 <div id="login">
    	<h1>Online Powerflow Computing</h1>
    	{% if msg %}
-	<p class="alert alert-danger">
-		{{msg}}
-	</p>
+	<p class="alert alert-danger">{{msg}}</p>
 	{% endif %}
    	<p class="alert alert-info">You need to login before use the system</p>
 	<form method="post" action="/login" >
