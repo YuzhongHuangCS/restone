@@ -3,19 +3,19 @@
 Settings
 {% endblock %}
 {% block bodycontent %}
-      <h2>Dear {{account}}, {{msg}}</h2>
-<form method="post" action="/settings">
-age:<input type="number" value={{age}} name="age"/><br/>
-JW:<input type="number" value={{JW}}  name="JW"/><br/>
-XW:<input type="number" value={{XW}}  name="XW"/><br/>
-YW:<input type="number" value={{YW}}  name="YW"/><br/>
-TW:<input type="number" value={{TW}}  name="TW"/><br/>
-XG:<input type="number" value={{XG}}  name="XG"/><br/>
-YG:<input type="number" value={{YG}}  name="YG"/><br/>
-<input type="submit" />
-<input type="submit" value="Cancel"
-onclick="window.location='/';return false;"/>
-</form>
-      <p>
-      </p>
+<div id="settings">
+    <h1>Dear {{account}}, {{msg}}</h1>
+	<form method="post" action="/settings">
+		age:<input type="number" value={{age}} name="age"/ class="form-control">
+		JW:<input type="number" value={{JW}}  name="JW"/ class="form-control">
+		XW:<input type="number" value={{XW}}  name="XW"/ class="form-control">
+		YW:<input type="number" value={{YW}}  name="YW"/ class="form-control">
+		TW:<input type="number" value={{TW}}  name="TW"/ class="form-control">
+		XG:<input type="number" value={{XG}}  name="XG"/ class="form-control">
+		YG:<input type="number" value={{YG}}  name="YG"/ class="form-control">
+
+		<input type="submit" value="Cancel" onclick="window.location='/';return false;" class="btn btn-lg btn-warning"/>
+		<input type="submit" class="btn btn-lg btn-success" />
+	</form>
+</div>
 {% endblock %}
