@@ -1,0 +1,104 @@
+body {
+    background: url(../img/background.png) no-repeat fixed;
+    background-size: cover;
+}
+::selection {
+    color: #FFF;
+    background: #4D2D5F;
+}
+.navbar {
+    .navbar-brand {
+        transition: all 0.5s;
+        &:hover {
+            background-color: #555;
+        }
+    }
+    .navbar-nav li {
+        transition: all 0.5s;
+        &:hover {
+            background-color: #555;
+        }
+    }
+}
+.jumbotron {
+    padding-top: 64px;
+    opacity: 0.75;
+    -webkit-animation: loadJumbotron 1s;
+    animation: loadJumbotron 1s;
+    @-webkit-keyframes loadJumbotron {
+        0% {
+            margin-top: -25rem;
+        }
+        100% {
+            margin-top: 0;
+        }
+    }
+    @keyframes loadJumbotron {
+        0% {
+            margin-top: -25rem;
+        }
+        100% {
+            margin-top: 0;
+        }
+    }
+}
+#apply {
+    margin: 10% auto;
+    width: 60%;
+    text-align: center;
+    form {
+        width: 50%;
+        margin: 0 auto;
+        text-align: left;
+        input {
+            margin: 0.5rem 0 1.5rem;
+        }
+        .btn-group {
+            text-align: right;
+            float: right;
+            .btn {
+                margin: 1rem;
+            }
+        }
+    }
+}
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #FFF;
+    -webkit-animation: footerAnim 6s infinite;
+    animation: footerAnim 6s infinite;
+    p {
+        margin: 0;
+        cursor: pointer;
+    }
+    hr {
+        margin-top: 0;
+        width: 32rem;
+    }
+    @-webkit-keyframes footerAnim {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes footerAnim {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}

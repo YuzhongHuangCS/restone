@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        {% block title %}Online Powerflow Computing{% endblock %}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Online Powerflow Computing</a>
+            </div>
+            <div class="collapse navbar-collapse ">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/" {% if path=='index.html' %} class="selected" {% endif %}>Home</a>
+                    </li>
+                    {% if account %}
+                    <li><a href="/settings" {% if path=='settings.html' %} class="selected" {% endif %}>Settings</a>
+                    </li>
+                    {% endif %} {% if account %}
+                    <li><a href="/robot" {% if path=='robot.html' %} class="selected" {% endif %}>Robot</a>
+                    </li>
+                    {% endif %} {% if account %}
+                    <li><a href="/logout">Logout ({{account}})</a>
+                    </li>
+                    {% else %}
+                    <li><a href="/login" {% if path=='login.html' %} class="selected" {% endif %}>login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div id="bodycontent">
+        {% block bodycontent%} Replace Here {% endblock %}
+    </div>
+
+    <footer>
+        <p>Design and develop by restone</p>
+        <hr />
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

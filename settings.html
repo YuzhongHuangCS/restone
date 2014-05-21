@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+{% block title %}
+Settings
+{% endblock %}
+{% block bodycontent %}
+      <h2>Dear {{account}}, {{msg}}</h2>
+<form method="post" action="/settings">
+age:<input type="number" value={{age}} name="age"/><br/>
+JW:<input type="number" value={{JW}}  name="JW"/><br/>
+XW:<input type="number" value={{XW}}  name="XW"/><br/>
+YW:<input type="number" value={{YW}}  name="YW"/><br/>
+TW:<input type="number" value={{TW}}  name="TW"/><br/>
+XG:<input type="number" value={{XG}}  name="XG"/><br/>
+YG:<input type="number" value={{YG}}  name="YG"/><br/>
+<input type="submit" />
+<input type="submit" value="Cancel"
+onclick="window.location='/';return false;"/>
+</form>
+      <p>
+      </p>
+{% endblock %}
