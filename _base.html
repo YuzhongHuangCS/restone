@@ -19,24 +19,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Online Powerflow Computing</a>
+                <a class="navbar-brand" href="/">Online Powerflow Computing</a>
             </div>
             <div class="collapse navbar-collapse ">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/" {% if path=='index.html' %} class="selected" {% endif %}>Home</a>
-                    </li>
+                    <li {% if path=='index.html' %} class="active" {% endif %}><a href="/">Home</a></li>
                     {% if account %}
-                    <li><a href="/settings" {% if path=='settings.html' %} class="selected" {% endif %}>Settings</a>
-                    </li>
-                    {% endif %} {% if account %}
-                    <li><a href="/robot" {% if path=='robot.html' %} class="selected" {% endif %}>Robot</a>
-                    </li>
-                    {% endif %} {% if account %}
-                    <li><a href="/logout">Logout ({{account}})</a>
-                    </li>
+                        <li {% if path=='settings.html' %} class="active" {% endif %}><a href="/settings">Settings</a></li>
+                        <li {% if path=='robot.html' %} class="active" {% endif %}><a href="/robot">Robot</a></li>
+                        <li><a href="/logout">Logout ({{account}})</a></li>
                     {% else %}
-                    <li><a href="/login" {% if path=='login.html' %} class="selected" {% endif %}>login</a>
-                    </li>
+                        <li {% if path=='login.html' %} class="active" {% endif %}><a href="/login">login</a>   </li>
                     {% endif %}
                 </ul>
             </div>

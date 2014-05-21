@@ -6,10 +6,11 @@ Apply
 <div id="apply">
     <h1>New Account Request</h1>
     {% if error %}
-    <p class="alert alert-danger">{{error}}</p>
+        <p class="alert alert-danger">{{error}}</p>
+    {% else %}
+        <p class="alert alert-info">Please Enter Your Information Below:    </p>
+        <p class="alert alert-success">Notice: Account, Password and Email are required, other information can be submitted later</p>
     {% endif %}
-    <p class="alert alert-info">Please Enter Your Information Below:    </p>
-    <p class="alert alert-success">Notice: Account, Password and Email are required, other information can be submitted later</p>
 
     <form method="post" action="/apply">
         Account:
